@@ -14,10 +14,8 @@ const NotFound = () => {
           <div className="error-page text-center mt-5">
             <h1>Oops!</h1>
             <p>Sorry, an unexpected error has occurred.</p>
-            <p>
-              <i>{error.data}</i>
-              <i>{error.statusText}</i>
-            </p>
+            <p>{error.statusText}</p>
+            <p>{error.data}</p>
             <Button
               variant="link"
               onClick={() => navigate("/", { replace: true })}
