@@ -3,7 +3,7 @@ import LineChart from "./charts/LineChart";
 import PieChart from "./charts/PieChart";
 import SparkLinesChart from "./charts/SparkLinesChart";
 import StackedChart from "./charts/Stacked";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./dashboard.css";
 
 const Dashboard = () => {
@@ -14,17 +14,10 @@ const Dashboard = () => {
   const [showStackedChart, setShowStackedChart] = useState(true);
   const [showBarChart, setShowBarChart] = useState(true);
   const [showAllChart, setShowAllChart] = useState(true);
-  // refs
-  const showSparkChartRef = useRef(null);
-  const showPieChartRef = useRef(null);
-  const showLineChartRef = useRef(null);
-  const showStackedChartRef = useRef(null);
-  const showBarChartRef = useRef(null);
 
   function handleShowAllChart(): void {
     setShowAllChart(!showAllChart);
     setShowSparkChart(!allAreShown);
-    // showSparkChartRef.current.checked = true;
     setShowPieChart(!allAreShown);
     setShowLineChart(!allAreShown);
     setShowStackedChart(!allAreShown);
@@ -59,7 +52,6 @@ const Dashboard = () => {
               value=""
               id="showSparkChart"
               checked={showSparkChart}
-              ref={showSparkChartRef}
               onChange={() => setShowSparkChart(!showSparkChart)}
             />
             <label className="form-check-label" htmlFor="showSparkChart">
@@ -74,7 +66,6 @@ const Dashboard = () => {
               value=""
               id="showPieChart"
               checked={showPieChart}
-              ref={showPieChartRef}
               onChange={() => setShowPieChart(!showPieChart)}
             />
             <label className="form-check-label" htmlFor="showPieChart">
@@ -89,7 +80,6 @@ const Dashboard = () => {
               value=""
               id="showLineChart"
               checked={showLineChart}
-              ref={showLineChartRef}
               onChange={() => setShowLineChart(!showLineChart)}
             />
             <label className="form-check-label" htmlFor="showLineChart">
@@ -104,7 +94,6 @@ const Dashboard = () => {
               value=""
               id="showStackedChart"
               checked={showStackedChart}
-              ref={showStackedChartRef}
               onChange={() => setShowStackedChart(!showStackedChart)}
             />
             <label className="form-check-label" htmlFor="showStackedChart">
@@ -120,7 +109,6 @@ const Dashboard = () => {
               value=""
               id="showBarChart"
               checked={showBarChart}
-              ref={showBarChartRef}
               onChange={() => setShowBarChart(!showBarChart)}
             />
             <label className="form-check-label" htmlFor="showBarChart">
