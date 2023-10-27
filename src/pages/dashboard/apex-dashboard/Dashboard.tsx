@@ -35,6 +35,19 @@ const Dashboard = () => {
       {/* show hide charts */}
       <div className="row show-hide-charts">
         <div className="card mb-5 p-3 d-flex flex-row justify-content-around">
+          {/* show all charts */}
+          <div className="form-check form-switch">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value=""
+              id="showAllChart"
+              onChange={handleShowAllChart}
+            />
+            <label className="form-check-label" htmlFor="showAllChart">
+              Show All Charts
+            </label>
+          </div>
           {/* showSparkChart */}
           <div className="form-check form-switch">
             <input
@@ -109,20 +122,6 @@ const Dashboard = () => {
             />
             <label className="form-check-label" htmlFor="showBarChart">
               Bar Chart
-            </label>
-          </div>
-
-          {/* show all charts */}
-          <div className="form-check form-switch">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              value=""
-              id="showAllChart"
-              onChange={handleShowAllChart}
-            />
-            <label className="form-check-label" htmlFor="showAllChart">
-              Show All Charts
             </label>
           </div>
         </div>
