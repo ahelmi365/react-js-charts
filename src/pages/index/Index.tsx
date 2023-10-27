@@ -1,8 +1,9 @@
 import React from 'react'
+import Dashboard from '../dashboard/apex-dashboard/Dashboard'
 
 const Index = () => {
   return (
-    <h1>Index</h1>
+    <Dashboard/>
   )
 }
 
