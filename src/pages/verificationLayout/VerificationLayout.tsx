@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 // css
-import "./verificationLayout.css"
+import "./verificationLayout.css";
 
 const VerificationLayout = () => {
   return (

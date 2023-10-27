@@ -28,6 +28,10 @@
 }
 .verification-layout-container .right {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-basis: 40%;
   flex-grow: 1;
   flex-shrink: 0;
