@@ -39,7 +39,6 @@
   z-index: 1;
 }
 .verification-layout-container .right > * {
-  margin: 0 auto;
   max-width: 600px;
 }
 @media screen and (max-width: 768px) {

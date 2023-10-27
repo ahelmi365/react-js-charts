@@ -42,7 +42,6 @@
     z-index: 1;
     // apply rule on children of right side to set max-width
     > * {
-      margin: 0 auto;
       max-width: 600px;
     }
     // reset the background color on small screens[768px] of right side to its parent's background color
