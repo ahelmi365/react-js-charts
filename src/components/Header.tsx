@@ -1,34 +1,33 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
+// css
+import "./header.css"
 const Header = () => {
-  const navigate = useNavigate();
 
   return (
-    <div className="header">
-      <h1>Header</h1>
-      <ul>
-        <li>
+    <div className="row header mt-3">
+      <ul className="nav-links">
+        <li className="nav-link">
           <NavLink to="/" end>
             Home
           </NavLink>
         </li>
-        <li>
+        <li className="nav-link">
           <NavLink to="/faq">FAQ</NavLink>
         </li>
-        <li>
+        <li className="nav-link">
           <NavLink to="/contact">Contact</NavLink>
         </li>
-        <li>
-          <NavLink to="/dashboard">Dashboard</NavLink>
+        <li className="nav-link">
+          <NavLink to="/apex-dashboard">Apex-Charts</NavLink>
         </li>
-
-        <li
-          onClick={() => {
-            navigate("/user/login");
-          }}
-        >
-          Logout
+        <li className="nav-link">
+          <NavLink to="/google-dashboard">Google-Charts</NavLink>
         </li>
+        <li className="nav-link">
+          <NavLink to="/user/login"> Logout</NavLink>
+        </li>
+      
       </ul>
     </div>
   );

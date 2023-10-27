@@ -1,0 +1,38 @@
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li.nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  transition: 0.5s;
+  padding: 0.25rem;
+  border: 1px solid gray;
+  border-radius: 20px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-links li.nav-link:hover {
+  background-color: rgb(24, 37, 88);
+ 
+}
+
+.nav-links li.nav-link a {
+  text-decoration: none;
+  color: white;
+}
+.nav-links li.nav-link a.active {
+  font-weight: bold;
+  color: #07bd74
+  
+}
+
+.nav-links li.nav-link:hover a {
+  color: white;
+}
