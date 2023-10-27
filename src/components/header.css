@@ -18,18 +18,14 @@
   cursor: pointer;
 }
 
-.nav-links li.nav-link:hover {
-  background-color: rgb(24, 37, 88);
- 
-}
 
-.nav-links li.nav-link a {
+.nav-links a li.nav-link  {
   text-decoration: none;
   color: white;
 }
-.nav-links li.nav-link a.active {
+.nav-links a.active li.nav-link  {
   font-weight: bold;
-  color: #07bd74
+  text-decoration: underline;
   
 }
 
