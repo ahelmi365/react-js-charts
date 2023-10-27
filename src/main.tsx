@@ -14,7 +14,7 @@ import App from "./App.tsx";
 import FAQ from "./pages/faq/FAQ.tsx";
 import Index from "./pages/index/Index.tsx";
 import Login from "./pages/login/Login.tsx";
-import SignUp from "./pages/signUp/SignUp.tsx";
+import SignUp from "./pages/sign-up/SignUp.tsx";
 import NotFound from "./components/notFound.tsx";
 import RequireAuth from "./utils/RequireAuth.tsx";
 import Contact from "./pages/contatct/Contact.tsx";
