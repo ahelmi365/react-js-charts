@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import "./dashboard.css";
 
 const Dashboard = () => {
+  const [allAreShown, setAllAreShown] = useState(false);
   const [showSparkChart, setShowSparkChart] = useState(false);
   const [showPieChart, setShowPieChart] = useState(false);
   const [showLineChart, setShowLineChart] = useState(false);
@@ -20,12 +21,13 @@ const Dashboard = () => {
   const showBarChartRef = useRef(null);
 
   function handleShowAllChart(): void {
-    setShowSparkChart(!showSparkChart);
+    setShowSparkChart(!allAreShown);
     // showSparkChartRef.current.checked = true;
-    setShowPieChart(!showPieChart);
-    setShowLineChart(!showLineChart);
-    setShowStackedChart(!showStackedChart);
-    setShowBarChart(!showBarChart);
+    setShowPieChart(!allAreShown);
+    setShowLineChart(!allAreShown);
+    setShowStackedChart(!allAreShown);
+    setShowBarChart(!allAreShown);
+    setAllAreShown(!allAreShown);
   }
 
   return (
@@ -40,6 +42,7 @@ const Dashboard = () => {
               type="checkbox"
               value=""
               id="showSparkChart"
+              checked={showSparkChart}
               ref={showSparkChartRef}
               onChange={() => setShowSparkChart(!showSparkChart)}
             />
@@ -54,6 +57,7 @@ const Dashboard = () => {
               type="checkbox"
               value=""
               id="showPieChart"
+              checked={showPieChart}
               ref={showPieChartRef}
               onChange={() => setShowPieChart(!showPieChart)}
             />
@@ -68,6 +72,7 @@ const Dashboard = () => {
               type="checkbox"
               value=""
               id="showLineChart"
+              checked={showLineChart}
               ref={showLineChartRef}
               onChange={() => setShowLineChart(!showLineChart)}
             />
@@ -82,6 +87,7 @@ const Dashboard = () => {
               type="checkbox"
               value=""
               id="showStackedChart"
+              checked={showStackedChart}
               ref={showStackedChartRef}
               onChange={() => setShowStackedChart(!showStackedChart)}
             />
@@ -97,6 +103,7 @@ const Dashboard = () => {
               type="checkbox"
               value=""
               id="showBarChart"
+              checked={showBarChart}
               ref={showBarChartRef}
               onChange={() => setShowBarChart(!showBarChart)}
             />
