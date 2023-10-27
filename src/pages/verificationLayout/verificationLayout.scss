@@ -1,51 +1,49 @@
 .verification-layout-container {
-  background-color: var(--bs-white);
   color: var(--bs-dark);
   height: 100vh;
   display: flex;
   justify-content: center;
-  flex-grow: 1;
-  flex-shrink: 0;
-  @media screen and (max-width: 768px) {
-    background-image: url("../../assets/images/verification-layout-background.jpg");
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(42, 60, 144, 0.3);
-      z-index: 0;
-    }
+  align-items: center;
+  background-image: url("../../assets/images/verification-layout-background.jpg");
+  // add overlay on background image to make it darker
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 60, 144, 0.3);
   }
 
+  // left side of the layout
   .left {
-    background-image: url("../../assets/images/verification-layout-background.jpg");
+    height: 100vh;
     flex-basis: 60%;
     flex-grow: 0;
     flex-shrink: 1;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 60%;
-      height: 100%;
-      background-color: rgba(42, 60, 144, 0.3);
-      z-index: 1;
-    }
-
+    // hide left side on small screens[768px]
     @media screen and (max-width: 768px) {
       display: none;
     }
   }
 
+  // right side of the layout
   .right {
+    height: 100vh;
     flex-basis: 40%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: white;
+    z-index: 1;
+    // apply rule on children of right side to set max-width
+    > * {
+      margin: 0 auto;
+      max-width: 600px;
+    }
+    // reset the background color on small screens[768px] of right side to its parent's background color
     @media screen and (max-width: 768px) {
-      flex-basis: 70%;
+      background-color: initial;
     }
   }
 }
