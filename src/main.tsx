@@ -56,13 +56,13 @@ const router = createBrowserRouter([
     ],
   },
 
-  // outer-layout
+  // Verification Layout
   {
     path: "/user",
     element: <VerificationLayout />,
     errorElement: <NotFound />,
     children: [
-      { index: true, element: <h1>welocome to user</h1> },
+      // { index: true, element: <h1>welcome to user</h1> },
       { path: "login", element: <Login /> },
       { path: "sign-up", element: <SignUp /> },
       {
