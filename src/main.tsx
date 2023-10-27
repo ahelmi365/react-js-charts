@@ -7,8 +7,7 @@ import {
 } from "react-router-dom";
 
 // css
-import "./index.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./scss/main.css";
 
 // components
 import App from "./App.tsx";
@@ -20,7 +19,8 @@ import NotFound from "./components/notFound.tsx";
 import RequireAuth from "./utils/RequireAuth.tsx";
 import Contact from "./pages/contatct/Contact.tsx";
 import EditUser from "./pages/editUser/EditUser.tsx";
-import Dashboard from "./pages/dashboard/Dashboard.tsx";
+import ApexDashboard from "./pages/dashboard/apex-dashboard/Dashboard.tsx";
+import GoogleDashboard from "./pages/dashboard/google-dashbaord/Dashboard.tsx";
 import VerificationLayout from "./pages/verificationLayout/VerificationLayout.tsx";
 
 // Routing
@@ -46,8 +46,12 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "dashboard",
-        element: <Dashboard />,
+        path: "apex-dashboard",
+        element: <ApexDashboard />,
+      },
+      {
+        path: "google-dashboard",
+        element: <GoogleDashboard />,
       },
     ],
   },
