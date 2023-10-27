@@ -1,4 +1,3 @@
-import React from 'react'
 import Dashboard from '../dashboard/apex-dashboard/Dashboard'
 
 const Index = () => {
