@@ -22,7 +22,7 @@
 
   .left {
     background-image: url("../../assets/images/verification-layout-background.jpg");
-    flex-basis: 65%;
+    flex-basis: 60%;
     flex-grow: 0;
     flex-shrink: 1;
 
@@ -31,7 +31,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 65%;
+      width: 60%;
       height: 100%;
       background-color: rgba(42, 60, 144, 0.3);
       z-index: 1;
@@ -43,7 +43,7 @@
   }
 
   .right {
-    flex-basis: 35%;
+    flex-basis: 40%;
     @media screen and (max-width: 768px) {
       flex-basis: 70%;
     }
