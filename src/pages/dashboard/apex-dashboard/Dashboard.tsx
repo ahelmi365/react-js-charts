@@ -7,12 +7,13 @@ import { useRef, useState } from "react";
 import "./dashboard.css";
 
 const Dashboard = () => {
-  const [allAreShown, setAllAreShown] = useState(false);
-  const [showSparkChart, setShowSparkChart] = useState(false);
-  const [showPieChart, setShowPieChart] = useState(false);
-  const [showLineChart, setShowLineChart] = useState(false);
-  const [showStackedChart, setShowStackedChart] = useState(false);
-  const [showBarChart, setShowBarChart] = useState(false);
+  const [allAreShown, setAllAreShown] = useState(true);
+  const [showSparkChart, setShowSparkChart] = useState(true);
+  const [showPieChart, setShowPieChart] = useState(true);
+  const [showLineChart, setShowLineChart] = useState(true);
+  const [showStackedChart, setShowStackedChart] = useState(true);
+  const [showBarChart, setShowBarChart] = useState(true);
+  const [showAllChart, setShowAllChart] = useState(true);
   // refs
   const showSparkChartRef = useRef(null);
   const showPieChartRef = useRef(null);
@@ -21,6 +22,7 @@ const Dashboard = () => {
   const showBarChartRef = useRef(null);
 
   function handleShowAllChart(): void {
+    setShowAllChart(!showAllChart);
     setShowSparkChart(!allAreShown);
     // showSparkChartRef.current.checked = true;
     setShowPieChart(!allAreShown);
@@ -42,6 +44,7 @@ const Dashboard = () => {
               type="checkbox"
               value=""
               id="showAllChart"
+              checked={showAllChart}
               onChange={handleShowAllChart}
             />
             <label className="form-check-label" htmlFor="showAllChart">
