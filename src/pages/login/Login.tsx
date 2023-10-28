@@ -31,7 +31,7 @@ const Login = () => {
             </button>
           </div>
         </form>
-        <p className="mt-3">
+        <p className="mt-3 text-center">
           <Link to="/">Join as a Guest</Link>
         </p>
       </VerifyUser>
