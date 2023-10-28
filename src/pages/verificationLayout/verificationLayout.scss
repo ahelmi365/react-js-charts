@@ -5,6 +5,9 @@
   justify-content: center;
   align-items: center;
   background-image: url("../../assets/images/verification-layout-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
   // add overlay on background image to make it darker
   &::before {
     content: "";
@@ -18,7 +21,6 @@
 
   // left side of the layout
   .left {
-    height: 100vh;
     flex-basis: 60%;
     flex-grow: 0;
     flex-shrink: 1;
@@ -31,19 +33,13 @@
   // right side of the layout
   .right {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    overflow: scroll;
+
     flex-basis: 40%;
     flex-grow: 1;
     flex-shrink: 0;
     background-color: white;
     z-index: 1;
-    // apply rule on children of right side to set max-width
-    > * {
-      max-width: 600px;
-    }
     // reset the background color on small screens[768px] of right side to its parent's background color
     @media screen and (max-width: 768px) {
       background-color: initial;
