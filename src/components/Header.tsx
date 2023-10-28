@@ -21,7 +21,10 @@ const Header = () => {
         <NavLink to="/google-dashboard">
           <li className="nav-link">Google-Charts</li>
         </NavLink> */}
-        <NavLink to="/user/login">
+        <NavLink
+          to="/user/login"
+          onClick={() => localStorage.removeItem("userInfo")}
+        >
           <li className="nav-link">Logout</li>
         </NavLink>
       </ul>

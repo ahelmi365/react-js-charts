@@ -4,7 +4,8 @@ interface props {
   children: React.ReactNode;
 }
 const RequireAuth = ({ children }: props) => {
-  const isLoggedIn = true;
+  const userInfo = localStorage.getItem("userInfo");
+  const isLoggedIn = userInfo ? true : false;
 
   return isLoggedIn ? children : <Navigate to="/user/login" />;
 };
