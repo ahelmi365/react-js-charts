@@ -2,6 +2,7 @@ import { BiSolidUserCircle } from "react-icons/bi";
 import VerifyUser from "../../components/verifiyUser/VerifyUser";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { LuPartyPopper } from "react-icons/lu";
 import "./login.css";
 const Login = () => {
   const naviagte = useNavigate();
@@ -73,7 +74,7 @@ const Login = () => {
               )
             }
           >
-            Join as a Guest
+            Join as a Guest <LuPartyPopper size={20} className="mx-2"/>
           </Link>
         </p>
       </VerifyUser>
