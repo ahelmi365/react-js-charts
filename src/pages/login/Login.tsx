@@ -31,6 +31,9 @@ const Login = () => {
             </button>
           </div>
         </form>
+        <p className="mt-3">
+          <Link to="/">Join as a Guest</Link>
+        </p>
       </VerifyUser>
     </div>
   );
