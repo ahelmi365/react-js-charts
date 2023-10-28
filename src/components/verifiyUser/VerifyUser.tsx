@@ -9,12 +9,14 @@ interface props {
 }
 const VerifyUser = ({ children, Icon, title }: props) => {
   return (
-    <div className="card verify-container">
-      <div className="verify-container-header d-flex flex-row align-items-center justify-content-start">
-        <Icon className="" size={25} />
-        <h6 className="m-0 ms-2">{title}</h6>
+    <div className="verify-container">
+      <div className="card">
+        <div className="verify-container-header d-flex flex-row align-items-center justify-content-start">
+          <Icon className="" size={25} />
+          <h6 className="m-0 ms-2">{title}</h6>
+        </div>
+        <div className="form-container">{children}</div>
       </div>
-      <div className="form-container">{children}</div>
     </div>
   );
 };
