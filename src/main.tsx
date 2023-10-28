@@ -62,7 +62,7 @@ const router = createBrowserRouter([
     element: <VerificationLayout />,
     errorElement: <NotFound />,
     children: [
-      // { index: true, element: <h1>welcome to user</h1> },
+      { index: true, element: <Login /> },
       { path: "login", element: <Login /> },
       { path: "sign-up", element: <SignUp /> },
       {
