@@ -33,7 +33,7 @@
   // right side of the layout
   .right {
     height: 100vh;
-    overflow: scroll;
+    overflow-x: scroll;
 
     flex-basis: 40%;
     flex-grow: 1;

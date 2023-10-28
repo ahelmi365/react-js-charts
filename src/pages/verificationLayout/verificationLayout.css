@@ -29,7 +29,7 @@
 }
 .verification-layout-container .right {
   height: 100vh;
-  overflow: scroll;
+  overflow-x: scroll;
   flex-basis: 40%;
   flex-grow: 1;
   flex-shrink: 0;
